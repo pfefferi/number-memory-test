@@ -39,7 +39,7 @@ function getCode() {
 function showInput() {
     const $inputBox = $('#input-box');
     $inputBox.removeClass('hide');
-    
+    $('#input').focus();
 };
 
 function hideInput() {
