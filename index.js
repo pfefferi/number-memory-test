@@ -1,9 +1,13 @@
+let numLength = 8;
+let codeTimer = 5;
+let inputTimer = 5;
 
 
 const $button = $('button');
 let code = "";
 
 $(button).on('click', () => {
+    gameSettings()
     hideInput();
     hideResult();
     const $showNumber = $('#showNumber');
@@ -18,14 +22,14 @@ $(button).on('click', () => {
                     checkInput(code);
                     hideInput();
                     code = "";
-                }, 6000);
+                }, inputTimer*1000);
 
-        }, 5000);
+        }, codeTimer*1000);
 });
 
 function getCode() {
     code = "";
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < numLength; i++) {
         randomDigit = Math.floor(Math.random() * 10);
         code += randomDigit.toString();
     }
@@ -60,4 +64,10 @@ function checkInput(code) {
 function hideResult() {
     const $result = $('#result');
     $result.addClass('hide').text('');
+}
+
+function gameSettings() {
+    codeTimer = parseInt($('#setCodeTimer')[0].value) ;
+    inputTimer = parseInt($('#setInputTimer')[0].value);
+    numLength = parseInt($('#setNumLength')[0].value);
 }
