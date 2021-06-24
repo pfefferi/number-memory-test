@@ -10,7 +10,6 @@
 .showNumber {
     text-align: center;
     font-size: xxx-large;
-    padding: auto;
 }
 
 .button {
@@ -20,5 +19,5 @@
 }
 
 .settings {
-    width: 30%;
+    width: 28%;
 }
