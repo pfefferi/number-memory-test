@@ -1,5 +1,5 @@
 .center {
-    width: 33.3%;
+    width: 33%;
     margin: 0 auto;
 }
 
@@ -9,12 +9,16 @@
 
 .showNumber {
     text-align: center;
-    margin: 5% auto;
     font-size: xxx-large;
+    padding: auto;
 }
 
 .button {
     text-align: center;
-    margin: 0 33%;
-    padding: 0 13%;
+    margin: 15% 33%;
+    padding: auto;
+}
+
+.settings {
+    width: 30%;
 }

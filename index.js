@@ -50,14 +50,14 @@ function hideInput() {
 };
 
 function checkInput(code) {
-    const $input = $('#input')[0].value;
+    const $input = $('#input')[0].value.toString();
     const $result = $('#result');
     if ($input == code) {
         console.log("success");
         $result.removeClass('hide').text("success");
     } else {
         console.log("fail");
-        $result.removeClass('hide').text(`fail ${code} ${$input} `);
+        $result.removeClass('hide').html(`fail </br> ${code} </br> ${$input} `);
     };
 };
 
